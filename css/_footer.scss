@@ -1,0 +1,97 @@
+footer{
+    position: relative;
+    overflow: hidden;
+    padding-top:13rem;
+    p{
+        color: var(--white)
+    }
+    .logo{
+        padding-bottom: 1rem;
+        
+        span{
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: white;
+            color:var(--primary);
+            font-size: var(--XSize);
+            text-align: center;
+            font-weight: bold;
+            border-radius: .3rem;
+            
+        }
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        top: -60vw;
+        left: -35vw;
+        width: 280vw;
+        height: 280vw;
+        background: var(--gradient);
+        animation: animationBg 3s linear infinite;
+        transform-origin: 50% 50%;
+        z-index: -1;
+    }
+    @keyframes animationBg {
+        0%{transform: rotate(0%)}
+        0%{transform: rotate(360deg)}
+    }
+
+    .footerWav{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 10rem;
+        background: url(../image/wav_02.svg);
+        transform:rotate(180deg);
+    }
+
+    .contactus{
+        color: var(--white);
+        h4{
+            font-size: var(--sSize);
+        }
+        i{
+            padding: 1rem;
+            background: var(--gradient1);
+        }
+    }
+    .subscribe{
+        color: var(--white);
+        h4{
+            font-size: var(--sSize);
+        }
+        .inputbox{
+            input{
+                width: 100%;
+                padding: .5rem 1rem;
+                border: none;
+                margin-bottom: .5rem;
+                transition: .3s all linear;
+                &:focus{
+                    outline: none;
+                }
+            }
+            button{
+                @include button_primary(){
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+
+    hr{
+        color: white;
+    }
+    .footerCredit{
+        text-align: center;
+        color:white;
+        h4{
+            font-size: var(--sSize);
+            padding-bottom: .5rem;
+        }
+    }
+
+}

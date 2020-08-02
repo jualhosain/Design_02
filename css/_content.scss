@@ -1,0 +1,87 @@
+#services{
+    .title {
+        @include forTitle(){
+            margin-bottom: 3rem; 
+        }
+    }
+    img{
+        height: 5rem;
+        margin-bottom: 1rem;
+    }
+    button{
+        @include button_primary(){
+
+        }
+    }
+}
+
+#about_us{
+    background: var(--lightBg);
+    .title{
+        @include forTitle(){
+            margin-bottom: 3rem; 
+        }
+    }
+    img{
+        width: 25rem;
+    }
+}
+
+
+#testimonials{
+    .forbodered{
+        border-left: .2rem solid var(--secondary);
+    }
+    .title{
+        @include forTitle(){
+            margin-bottom: 3rem; 
+        }
+    }
+    .imgText{
+        display: flex;
+        align-items: center;
+        img{
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .person_info{
+            padding-top: .4rem;
+
+            padding-left: 1rem;
+            line-height: .7rem;
+            h4{
+                font-size: var(--sSize);
+            }
+            p{
+                font-size: 1rem;
+            }
+        }
+
+    }
+    
+}
+
+#social_media{
+    padding: 5rem 0;
+    
+    background: var(--lightBg);
+    p{
+        font-size: var(--XSize);
+        font-weight: bold;
+        margin-bottom: 2rem; 
+        letter-spacing: .3rem;
+    }
+    a{
+        transition: .3s all linear;
+        &:hover img{
+            transform: translateY(-.8rem);
+        }
+        img{
+            height: 50px;
+            // margin: 0 .2rem;
+            transition: .3s all linear;
+        }
+    }
+}

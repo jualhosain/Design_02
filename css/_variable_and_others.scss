@@ -1,0 +1,81 @@
+:root{
+    --gradient: linear-gradient(to left, #ec407a, #e90090, #da00b0, #b600d6, #651fff);
+    --gradient1: linear-gradient(to left, #f500c4, #931fff, #651fff);
+    --primary: #EC407A;
+    --secondary: hsl(259, 100%, 56%);
+    --lightBg: #f4faff;
+    --primaryDark: hsl(340, 82%, 40%);
+    --secondaryDark: hsl(259, 100%, 36%);
+    --white: #fff;
+    --black: #000;
+    --XXXXSize: 8rem;
+    --XXXSize: 4rem;
+    --XXSize: 3rem;
+    --XSize: 2rem;
+    --mSize: 1.5rem;
+    --sSize: 1rem;
+    --fontBold:900
+    --fontNormal: 500; 
+    --fontlight: 300; 
+}
+
+
+@mixin fontTitle {
+    font-size: var(--XSize);
+    font-weight: bold;
+    @content
+}
+
+@mixin forTitle {
+    @include fontTitle(){
+        color: var(--black);
+    }
+    position: relative;
+    &:before{
+        content: '';
+        width: 14rem;
+        height: .3rem;
+        background:var(--primary);
+        position: absolute;
+        bottom:-.4rem;
+        left: calc(50% - 7rem);
+        border-radius: 1rem;
+
+    }
+    &:after{
+        content: '';
+        width: 4rem;
+        height: .5rem;
+        background:var(--primary);
+        position: absolute;
+        bottom: -.479rem;
+        left: calc(50% - 2rem);
+        border-radius: 1rem;
+    }
+    @content
+}
+
+@mixin button_primary(){
+    background: var(--gradient1);
+    background-size: 300% 300%;
+    background-position: 60% 0%;
+    color: var(--white);
+    font-size: var(--sSize);
+    border-radius: 2.5rem;
+    padding: .4rem 1rem;
+    border:none;
+    display: inline-block;
+    transition: .4s all linear;
+    &:hover{
+        background-position: 100% 100%;
+        padding: .4rem 1.4rem;
+        letter-spacing: .1rem;
+    }
+    &:active{
+        transform: scale(.8);
+    }
+    &:focus{
+        outline: none;
+    }
+    @content
+}

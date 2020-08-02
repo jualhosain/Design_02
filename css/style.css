@@ -1,0 +1,383 @@
+:root {
+  --gradient: linear-gradient(to left, #ec407a, #e90090, #da00b0, #b600d6, #651fff);
+  --gradient1: linear-gradient(to left, #f500c4, #931fff, #651fff);
+  --primary: #EC407A;
+  --secondary: hsl(259, 100%, 56%);
+  --lightBg: #f4faff;
+  --primaryDark: hsl(340, 82%, 40%);
+  --secondaryDark: hsl(259, 100%, 36%);
+  --white: #fff;
+  --black: #000;
+  --XXXXSize: 8rem;
+  --XXXSize: 4rem;
+  --XXSize: 3rem;
+  --XSize: 2rem;
+  --mSize: 1.5rem;
+  --sSize: 1rem;
+  --fontBold:900
+  --fontNormal: 500;
+  --fontlight: 300;
+}
+
+#navArea {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: var(--gradient1);
+  box-shadow: 0 0 5px #4b4b4b;
+  z-index: 99999999999;
+}
+#navArea nav {
+  width: 95%;
+  margin: auto;
+}
+#navArea nav a {
+  color: white;
+  font-weight: 600;
+}
+
+#banner {
+  position: relative;
+  overflow: hidden;
+  padding-top: 10rem;
+}
+#banner::before {
+  content: "";
+  position: absolute;
+  top: -60vw;
+  left: -35vw;
+  width: 280vw;
+  height: 280vw;
+  background: var(--gradient);
+  animation: animationBg 3s linear infinite;
+  transform-origin: 50% 50%;
+  z-index: -1;
+}
+@keyframes animationBg {
+  0% {
+    transform: rotate(0%);
+  }
+  0% {
+    transform: rotate(360deg);
+  }
+}
+#banner .bannerCol {
+  padding: 0 3rem;
+}
+#banner .bannerCol .title {
+  font-size: var(--XSize);
+  font-weight: bold;
+  color: var(--white);
+  padding-bottom: 1rem;
+}
+#banner .bannerCol .play {
+  font-size: var(--XXSize);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: var(--sSize);
+}
+#banner .bannerCol .play i {
+  font-size: var(--XXSize);
+  display: block;
+}
+#banner .bannerCol .play p {
+  font-size: var(--sSize);
+  margin-left: var(--sSize);
+  margin-bottom: 0;
+}
+#banner .extra_wav {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 10rem;
+  background: url(../image/wav_01.svg);
+}
+#banner .imgBlock {
+  display: block;
+  height: 30rem;
+  display: flex;
+  align-items: start;
+}
+#banner .imgBlock img {
+  margin-top: -2.2rem;
+}
+
+#services .title {
+  font-size: var(--XSize);
+  font-weight: bold;
+  color: var(--black);
+  position: relative;
+  margin-bottom: 3rem;
+}
+#services .title:before {
+  content: "";
+  width: 14rem;
+  height: 0.3rem;
+  background: var(--primary);
+  position: absolute;
+  bottom: -0.4rem;
+  left: calc(50% - 7rem);
+  border-radius: 1rem;
+}
+#services .title:after {
+  content: "";
+  width: 4rem;
+  height: 0.5rem;
+  background: var(--primary);
+  position: absolute;
+  bottom: -0.479rem;
+  left: calc(50% - 2rem);
+  border-radius: 1rem;
+}
+#services img {
+  height: 5rem;
+  margin-bottom: 1rem;
+}
+#services button {
+  background: var(--gradient1);
+  background-size: 300% 300%;
+  background-position: 60% 0%;
+  color: var(--white);
+  font-size: var(--sSize);
+  border-radius: 2.5rem;
+  padding: 0.4rem 1rem;
+  border: none;
+  display: inline-block;
+  transition: 0.4s all linear;
+}
+#services button:hover {
+  background-position: 100% 100%;
+  padding: 0.4rem 1.4rem;
+  letter-spacing: 0.1rem;
+}
+#services button:active {
+  transform: scale(0.8);
+}
+#services button:focus {
+  outline: none;
+}
+
+#about_us {
+  background: var(--lightBg);
+}
+#about_us .title {
+  font-size: var(--XSize);
+  font-weight: bold;
+  color: var(--black);
+  position: relative;
+  margin-bottom: 3rem;
+}
+#about_us .title:before {
+  content: "";
+  width: 14rem;
+  height: 0.3rem;
+  background: var(--primary);
+  position: absolute;
+  bottom: -0.4rem;
+  left: calc(50% - 7rem);
+  border-radius: 1rem;
+}
+#about_us .title:after {
+  content: "";
+  width: 4rem;
+  height: 0.5rem;
+  background: var(--primary);
+  position: absolute;
+  bottom: -0.479rem;
+  left: calc(50% - 2rem);
+  border-radius: 1rem;
+}
+#about_us img {
+  width: 25rem;
+}
+
+#testimonials .forbodered {
+  border-left: 0.2rem solid var(--secondary);
+}
+#testimonials .title {
+  font-size: var(--XSize);
+  font-weight: bold;
+  color: var(--black);
+  position: relative;
+  margin-bottom: 3rem;
+}
+#testimonials .title:before {
+  content: "";
+  width: 14rem;
+  height: 0.3rem;
+  background: var(--primary);
+  position: absolute;
+  bottom: -0.4rem;
+  left: calc(50% - 7rem);
+  border-radius: 1rem;
+}
+#testimonials .title:after {
+  content: "";
+  width: 4rem;
+  height: 0.5rem;
+  background: var(--primary);
+  position: absolute;
+  bottom: -0.479rem;
+  left: calc(50% - 2rem);
+  border-radius: 1rem;
+}
+#testimonials .imgText {
+  display: flex;
+  align-items: center;
+}
+#testimonials .imgText img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+#testimonials .imgText .person_info {
+  padding-top: 0.4rem;
+  padding-left: 1rem;
+  line-height: 0.7rem;
+}
+#testimonials .imgText .person_info h4 {
+  font-size: var(--sSize);
+}
+#testimonials .imgText .person_info p {
+  font-size: 1rem;
+}
+
+#social_media {
+  padding: 5rem 0;
+  background: var(--lightBg);
+}
+#social_media p {
+  font-size: var(--XSize);
+  font-weight: bold;
+  margin-bottom: 2rem;
+  letter-spacing: 0.3rem;
+}
+#social_media a {
+  transition: 0.3s all linear;
+}
+#social_media a:hover img {
+  transform: translateY(-0.8rem);
+}
+#social_media a img {
+  height: 50px;
+  transition: 0.3s all linear;
+}
+
+footer {
+  position: relative;
+  overflow: hidden;
+  padding-top: 13rem;
+}
+footer p {
+  color: var(--white);
+}
+footer .logo {
+  padding-bottom: 1rem;
+}
+footer .logo span {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: white;
+  color: var(--primary);
+  font-size: var(--XSize);
+  text-align: center;
+  font-weight: bold;
+  border-radius: 0.3rem;
+}
+footer::before {
+  content: "";
+  position: absolute;
+  top: -60vw;
+  left: -35vw;
+  width: 280vw;
+  height: 280vw;
+  background: var(--gradient);
+  animation: animationBg 3s linear infinite;
+  transform-origin: 50% 50%;
+  z-index: -1;
+}
+@keyframes animationBg {
+  0% {
+    transform: rotate(0%);
+  }
+  0% {
+    transform: rotate(360deg);
+  }
+}
+footer .footerWav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10rem;
+  background: url(../image/wav_02.svg);
+  transform: rotate(180deg);
+}
+footer .contactus {
+  color: var(--white);
+}
+footer .contactus h4 {
+  font-size: var(--sSize);
+}
+footer .contactus i {
+  padding: 1rem;
+  background: var(--gradient1);
+}
+footer .subscribe {
+  color: var(--white);
+}
+footer .subscribe h4 {
+  font-size: var(--sSize);
+}
+footer .subscribe .inputbox input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: none;
+  margin-bottom: 0.5rem;
+  transition: 0.3s all linear;
+}
+footer .subscribe .inputbox input:focus {
+  outline: none;
+}
+footer .subscribe .inputbox button {
+  background: var(--gradient1);
+  background-size: 300% 300%;
+  background-position: 60% 0%;
+  color: var(--white);
+  font-size: var(--sSize);
+  border-radius: 2.5rem;
+  padding: 0.4rem 1rem;
+  border: none;
+  display: inline-block;
+  transition: 0.4s all linear;
+  border-radius: 0;
+}
+footer .subscribe .inputbox button:hover {
+  background-position: 100% 100%;
+  padding: 0.4rem 1.4rem;
+  letter-spacing: 0.1rem;
+}
+footer .subscribe .inputbox button:active {
+  transform: scale(0.8);
+}
+footer .subscribe .inputbox button:focus {
+  outline: none;
+}
+footer hr {
+  color: white;
+}
+footer .footerCredit {
+  text-align: center;
+  color: white;
+}
+footer .footerCredit h4 {
+  font-size: var(--sSize);
+  padding-bottom: 0.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */
